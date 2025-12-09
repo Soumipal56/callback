@@ -17,7 +17,7 @@
 //     });
 // });
 
-// EXERCISE 1
+// QUESTION 1
 // function afterDelay(time, cb){
 //     setTimeout(() =>{
 //         cb();
@@ -28,7 +28,7 @@
 //     console.log("Callback executed");
 // });
 
-// EXERCISE 2
+// QUESTION 2
 // function getUser(username, cb){
 //     setTimeout(()=>{
 //         cb({id: 1, username: username});
@@ -49,7 +49,7 @@
 //     });
 // });
 
-// EXERCISE 3
+// QUESTION 3
 // function loginUser(username, cb) {
 //     console.log("login user...");
 //     setTimeout(() => {
@@ -79,7 +79,7 @@
 //     });
 // });
 
-// EXERCISE 4
+// QUESTION 4
 // function getProduct(id, callback){
 //     setTimeout(() => {
 //         callback({id: id, name: "Laptop"});
@@ -106,5 +106,40 @@
 //     });
 // });
 
+// QUESTION 5
+// function registerUser(email, callback){
+//     console.log("Register user...");
+//     setTimeout(() => {
+//         callback({id: 101, email: "soumi@gmail.com"});
+//     }, 1000);
+// }
 
+// function sendOTP(userId, callback){
+//     console.log("Send OTP...");
+//     setTimeout(() => {
+//         const otp = 720951;
+//         callback(otp);   
+//     }, 2000);
+// }
+
+// function verifyOTP(otp, callback){
+//     console.log("Verifying OTP...");
+//     setTimeout(() => {
+//         if(otp === 720951){
+//             callback("Verified");
+//         } else {
+//             callback("Not verified");
+//         }
+//     }, 3000);
+// }
+
+// registerUser("soumi@gmail.com", function(user){
+//     console.log("User registered:", user);
+//     sendOTP(user.id, function(otp){
+//         console.log("OTP sent:", otp);
+//         verifyOTP(otp, function(result){
+//             console.log("OTP Status:", result);
+//         });
+//     })
+// })
 
