@@ -1,20 +1,34 @@
 // EXERCISE 1
 // function afterDelay(time, cb){
-//     setTimeout(function(){
+//     setTimeout(() =>{
 //         cb();
 //     }, time);
 // }
 
 // afterDelay(3000, function(){
-//     console.log("callback executed");
-// })
+//     console.log("Callback executed");
+// });
 
 // EXERCISE 2
 // function getUser(username, cb){
-//     setTimeout(() => {
-//         cb({id: 1, username: "soumi"});
+//     setTimeout(()=>{
+//         cb({id: 1, username: username});
 //     }, 1000);
 // }
+
+// function getUserPosts(userId, cb){
+//     setTimeout(()=>{
+//         cb([{id: 1, title: "post1"}, {id: 2, title: "post2"}]);
+//     }, 1000);
+// }
+
+// getUser("Soumi", function(user) {
+//     console.log("Username:", user.username);
+
+//     getUserPosts(user.id, function(posts) {
+//         console.log("Posts:", posts);
+//     });
+// });
 
 // EXERCISE 3
 // function loginUser(username, cb) {
@@ -46,9 +60,11 @@
 //     });
 // });
 
-// promises
 
-
-
-
+// function abcd(fn){
+//     fn();
+// }
+// abcd(function(){
+//   console.log("hello");
+// });
 
