@@ -1,3 +1,22 @@
+// Rules to remember callback hell:
+// function instagramSeDataLaoo(username, cb){
+//     setTimeout(()=>{
+//         cb({id: 1, username: username});
+//     }, 3000);
+// }
+
+// function metadataLaoo(uniquenumber, cb){
+//     setTimeout(()=>{
+//         cb(["img1", "img2", "img3"]);
+//     }, 4000);
+// }
+
+// instagramSeDataLaoo("soumi", function(data){
+//     metadataLaoo(data.uniquenumber, function(images){
+//         console.log("Images: ", images);
+//     });
+// });
+
 // EXERCISE 1
 // function afterDelay(time, cb){
 //     setTimeout(() =>{
@@ -60,6 +79,32 @@
 //     });
 // });
 
+// EXERCISE 4
+// function getProduct(id, callback){
+//     setTimeout(() => {
+//         callback({id: id, name: "Laptop"});
+//     }, 1000);
+// }
+// function getPrice(productId, callback){
+//     setTimeout(() => {
+//         callback(1000);
+//     }, 1000);
+// }
+// function applyDiscount(price, callback){
+//     setTimeout(() =>{
+//         callback(price * 0.9);
+//     }, 1000);
+// }
+
+// getProduct(1, function(product){
+//     console.log("Product: ", product.name);
+//     getPrice(product.id, function(price){
+//         console.log("Price: ", price);
+//     applyDiscount(price, function(discountedPrice){
+//         console.log("Discounted Price: ", discountedPrice);
+//     });
+//     });
+// });
 
 
 
